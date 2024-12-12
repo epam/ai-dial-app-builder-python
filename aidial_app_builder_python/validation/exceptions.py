@@ -1,0 +1,2 @@
+class AppValidationException(Exception):
+    pass

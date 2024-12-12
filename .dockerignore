@@ -1,0 +1,7 @@
+**
+!poetry.lock
+!poetry.toml
+!pyproject.toml
+!entrypoint.sh
+!aidial_app_builder_python
+!templates
