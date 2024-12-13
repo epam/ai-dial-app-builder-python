@@ -28,7 +28,7 @@ responses = "^0.25.3"
 
 [tool.poetry.group.lint.dependencies]
 flake8 = "^6.0.0"
-black = "^23.3.0"
+black = "^24.3.0"
 isort = "^5.12.0"
 pyright = "^1.1.324"
 autoflake = "^2.2.0"
@@ -68,11 +68,11 @@ in_place = true
 recursive = true
 quiet = true
 exclude = [
-    '.git',
-    '.venv',
-    '.nox',
-    '.pytest_cache',
-    '__pycache__',
+    "\\.git",
+    "\\.venv",
+    "\\.nox",
+    "\\.pytest_cache",
+    "__pycache__",
 ]
 
 [build-system]
