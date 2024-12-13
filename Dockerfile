@@ -2,14 +2,14 @@ FROM python:3.11-alpine AS builder
 
 ARG POETRY_VERSION=1.6.1
 
-RUN pip install --upgrade pip
-RUN pip install poetry==$POETRY_VERSION
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir poetry==$POETRY_VERSION
 
 RUN echo "Poetry version:" && poetry --version
 
 WORKDIR /builder
 
-COPY pyproject.toml poetry.lock poetry.toml .
+COPY pyproject.toml poetry.lock poetry.toml /builder/
 RUN poetry install --no-interaction --no-ansi --only main
 
 FROM python:3.11-alpine
