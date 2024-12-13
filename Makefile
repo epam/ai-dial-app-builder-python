@@ -1,6 +1,6 @@
 IMAGE_NAME ?= ai-dial-app-builder-python
 
-.PHONY: all install build clean lint format
+.PHONY: all install build test clean lint format
 
 all: build
 
@@ -9,6 +9,9 @@ install:
 
 build: install
 	poetry build
+
+test:
+	@echo "No tests yet"
 
 clean:
 	poetry env remove --all
