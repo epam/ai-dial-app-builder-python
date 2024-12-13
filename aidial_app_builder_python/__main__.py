@@ -5,7 +5,9 @@ from urllib.parse import unquote, urljoin
 
 import requests
 
-from aidial_app_builder_python.validation.exceptions import AppValidationException
+from aidial_app_builder_python.validation.exceptions import (
+    AppValidationException,
+)
 
 
 def download_files(
@@ -86,7 +88,9 @@ def main():
 
 def validate(profile, target):
     if profile == "python-pip":
-        from aidial_app_builder_python.validation.python_pip.validation import validate_sources
+        from aidial_app_builder_python.validation.python_pip.validation import (
+            validate_sources,
+        )
 
         validate_sources(target)
 
