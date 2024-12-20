@@ -10,5 +10,5 @@ concurrency:
 
 jobs:
   release:
-    uses: epam/ai-dial-ci/.github/workflows/python_docker_release.yml@eb9d2b30987d293df82f5d6b9269644a39c3e5e5
+    uses: epam/ai-dial-ci/.github/workflows/python_docker_release.yml@1.10.1
     secrets: inherit
