@@ -1,11 +1,6 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
-# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
-
 version: 2
 updates:
-  - package-ecosystem: "poetry"
+  - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "weekly"
@@ -25,4 +20,15 @@ updates:
     commit-message:
       # Prefix all commit messages with "chore: "
       prefix: "chore"
-
+    groups:
+      ai-dial-ci:
+        applies-to: version-updates
+        patterns:
+          - "epam/ai-dial-ci/*"
+      github-actions:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "epam/ai-dial-ci/*"
+    open-pull-requests-limit: 10
