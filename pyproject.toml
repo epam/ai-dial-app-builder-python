@@ -28,7 +28,7 @@ responses = "^0.25.3"
 
 [tool.poetry.group.lint.dependencies]
 flake8 = "^6.0.0"
-black = "^24.3.0"
+black = ">=24.3,<27.0"
 isort = "^5.12.0"
 pyright = "^1.1.324"
 autoflake = "^2.2.0"
