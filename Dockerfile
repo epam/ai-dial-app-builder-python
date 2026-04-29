@@ -14,8 +14,11 @@ RUN poetry install --no-interaction --no-ansi --only main
 
 FROM python:3.11-alpine
 
-# fix CVE-2024-6345
-RUN pip install --no-cache-dir "setuptools==70.0.0"
+# security updates
+RUN pip install --no-cache-dir --upgrade \
+    "setuptools>=82.0.0" \
+    "wheel>=0.46.2" \
+    "urllib3>=2.6.3"
 
 ENV DIAL_BASE_URL=''
 ENV SOURCES=''

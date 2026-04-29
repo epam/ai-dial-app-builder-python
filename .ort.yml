@@ -15,3 +15,6 @@ resolutions:
     - message: ".*PyPI::packaging:24\\.2.*"
       reason: 'CANT_FIX_EXCEPTION'
       comment: 'Apache-2 License: https://github.com/pypa/packaging/blob/main/LICENSE'
+    - message: ".*PyPI::urllib3:2\\.6\\.3.*"
+      reason: "CANT_FIX_EXCEPTION"
+      comment: "urllib3 is licensed under MIT: https://github.com/urllib3/urllib3/blob/main/LICENSE.txt"
