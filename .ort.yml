@@ -1,20 +1,14 @@
 ---
+analyzer:
+  skip_excluded: true
 excludes:
   scopes:
-  - pattern: "dev"
-    reason: "DEV_DEPENDENCY_OF"
-    comment: "Packages for development only."
-  - pattern: "lint"
-    reason: "DEV_DEPENDENCY_OF"
-    comment: "Packages for static code analysis only."
-  - pattern: "test"
-    reason: "TEST_DEPENDENCY_OF"
-    comment: "Packages for testing only."
-resolutions:
-  rule_violations:
-    - message: ".*PyPI::packaging:24\\.2.*"
-      reason: 'CANT_FIX_EXCEPTION'
-      comment: 'Apache-2 License: https://github.com/pypa/packaging/blob/main/LICENSE'
-    - message: ".*PyPI::urllib3:2\\.6\\.3.*"
-      reason: "CANT_FIX_EXCEPTION"
-      comment: "urllib3 is licensed under MIT: https://github.com/urllib3/urllib3/blob/main/LICENSE.txt"
+    - pattern: "dev"
+      reason: "DEV_DEPENDENCY_OF"
+      comment: "Packages for development only."
+    - pattern: "lint"
+      reason: "DEV_DEPENDENCY_OF"
+      comment: "Packages for static code analysis only."
+    - pattern: "test"
+      reason: "TEST_DEPENDENCY_OF"
+      comment: "Packages for testing only."
