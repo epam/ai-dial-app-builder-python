@@ -22,7 +22,7 @@ nox = "^2023.4.22"
 python-dotenv = "^1.0.0"
 
 [tool.poetry.group.test.dependencies]
-pytest = "^7.4.2"
+pytest = ">=7.4.2,<10.0.0"
 pytest-asyncio = "^0.21.1"
 responses = "^0.25.3"
 
